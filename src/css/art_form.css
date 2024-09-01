@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'opensans';
+    src: url('../font/OpenSans-Regular.ttf');
+}
+
+*{
+    font-family: 'opensans';
+}
+
+h1, h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.form_container {
+    width: 80%;
+    min-width: 1000px;
+    padding: 20px;
+    margin: 0 auto; 
+    background-image: linear-gradient(orange, violet);
+}
+
+table {
+    margin: 0 auto;
+    width: 900px;
+    font-size: 16px;
+    /* border-spacing: 10px; */
+}
+
+td {
+    padding: 8px;
+    width: 40%;
+    border-collapse: collapse;
+}
+
+input{
+    border-radius: 5px;
+}
+label{
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.class_plans {
+    font-size: 16px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.class_plans label{
+    padding: 5px 0px;
+}
+
+.art_form_submit_button{
+    width: 150px;
+    display: block;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 0 auto;
+    transition: transform ease-in-out 0.5s;
+    border: transparent;
+}
+
+.art_form_submit_button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    background: linear-gradient(45deg, #6a1b9a, #1e88e5);
+}

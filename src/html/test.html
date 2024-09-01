@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Registration Form</title>
+    <link rel="stylesheet" href="../css/test.css">
+</head>
+
+<body>
+    <div class="register-container">
+        <form class="register-form">
+            <p>
+                <img src="../../assets/cj_remember_that.png" alt="Logo">
+                <span>J<span class="h1">yaasa Creative Group Pvt. Ltd.</span></span>
+                <h3>Enroll a student</h3>
+            </p>
+            <div class="photo-upload">
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <div class="photo-preview">
+                    <span>Click to upload a photo</span>
+                </div>
+            </div>
+            <label for="form_no"><b>Form No</b>
+                <br><input type="text" id="form_no" name="form_no" required>
+            </label>
+            <label for="student_name"><b>Student Name</b>
+                <br><input type="text" id="student_name" name="student_name" required>
+            </label>
+            <label for="birthdate"><b>Date of Birth</b>
+                <br><input type="date" id="birthdate" name="birthdate" min="1980-01-01" 
+                max="2019-12-31" required>
+            </label>
+            <label for="admission_date"><b>Admission Date</b>
+                <br><input type="date" id="admission_date" name="admission_date" required>
+            </label>
+
+            <label for="gender"><b>Gender</b></label>
+            <label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <span>Male</span>
+            </label>
+            <label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <span>Female</span>
+            </label>
+            <label for="joining_date"><b>Joining Date</b>
+                <br><input type="date" id="joining_date" name="joining_date" required>
+            </label>
+
+            <label for="guardian_name"><b>Guardian's Name</b>
+                <br><input type="text" id="guardian_name" name="guardian_name" required>
+            </label>
+            <label for="mobileno"><b>Mobile Number</b>
+                <br><input type="number" id="mobileno" name="mobileno" pattern="\d{10}" placeholder="Enter a valid number" required>
+            </label>
+            <label for="college_name"><b>Name of College/School</b>
+                <br><input type="text" id="college_name" name="college_name" required>
+            </label>
+            <label for="college_address"><b>College/School Address</b>
+                <br><input type="text" id="college_address" name="college_address" required>
+            </label>
+
+            <label for="email_address"><b>Email Address</b>
+                <br><input type="text" id="email_address" name="email_address" required>
+            </label>
+
+            <label for="plans"><b>Class Plans</b></label>
+            <label>
+                <input type="radio" id="plan1" name="plan" value="plan1" onchange="show_art()" required>
+                <span>Daily Classes 5 days/ week <b>(20 days/month)</b></span>
+            </label>
+            <label>
+                <input type="radio" id="plan2" name="plan" value="plan2" onchange="show_art()" required>
+                <span>Alternate Classes 3 days/week <b>(12 days/month)</b></span>
+            </label>
+            <label>
+                <input type="radio" id="plan3" name="plan" value="plan3" onchange="show_art()" required>
+                <span>Twice a week <b>(8 days/month)</b></span>
+            </label>
+            <label>
+                <input type="radio" id="plan4" name="plan" value="plan4" onchange="show_art()" required>
+                <span>Once a week/ Saturday Classes<b> (4 days/month)</b></span>
+            </label>
+            <label>
+                <input type="radio" id="plan5" name="plan" value="plan5" onchange="show_art()" required>
+                <span>Art Camp</span>
+            </label>
+            <label id="days" for="days"><b>Number of days (for art camp)</b>
+                <br><input type="number" name="days">
+            </label>
+            <label for="course"><b>Course</b></label>
+            <label>
+                <input type="radio" id="basic_course" name="course" value="basic_course" required>
+                <span>Basic course</span>
+            </label>
+            <label>
+                <input type="radio" id="advance_course" name="course" value="advance_course" required>
+                <span>Advanced course</span>
+            </label>
+            <label for="admission_fee"><b>Admission Fee</b>
+                <br><input type="number" id="admission_fee" name="admission_fee" required>
+            </label>
+            <label for="fee"><b>Fee</b>
+                <br><input type="number" id="fee" name="fee" required>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="../JS/test.js"></script>
+</body>
+
+</html>
