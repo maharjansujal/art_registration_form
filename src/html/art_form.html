@@ -5,129 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/art_form.css">
+    <link rel="stylesheet" href="../css/test.css">
 </head>
 
 <body>
-    <div class="form_container">
-        <h1>
-            Jyaasa Creative Group Pvt. Ltd.
-        </h1>
-        <h3>
-            Art Class Registration Form
-        </h3>
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <label for="name">Name:<input type="text" name="name" maxlength="50" autocomplete="off">
-                        </label>
-                    </td>
-                    <td>
-                        <label for="admission_date">Admission Date:<input type="date" id="admission_date"
-                                name="admission_date" min="2022-01-01" max="2025-12-31">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="gender">Gender:
-                            <input type="radio" id="male" name="gender" value="male"> Male
-                            <input type="radio" id="female" name="gender" value="female"> Female
-                            <input type="radio" id="other" name="gender" value="other"> Other
-                        </label>
-                    </td>
-                    <td>
-                        <label for="joining_date">Joining Date:<input type="date" id="joining_date" name="joining_date"
-                                min="2022-01-01" max="2025-12-31">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="birth_date">Date of Birth:<input type="date" id="birth_date" name="birth_date"
-                                min="2022-01-01" max="2025-12-31">
-                        </label>
-                    </td>
-                    <td>
-                        <label for="class">Class:<input type="text" name="name" maxlength="50" autocomplete="off">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="guardian_name">Guardian's name:
-                            <input type="text" name="guardian_name" maxlength="50" autocomplete="off">
-                        </label>
-                    </td>
-                    <td>
-                        <label for="mobile_number">Mobile Number:
-                            <input type="number" name="mobile_number" maxlength="50" autocomplete="off">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="address">Address:
-                            <input type="text" name="address" maxlength="50" autocomplete="off" size="40">
-                        </label>
-                    </td>
-                    <td>
-                        <label for="phone_number">Phone Number:
-                            <input type="number" name="phone_number" maxlength="10" autocomplete="off">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="college_name">Name of College/School:
-                            <input type="text" name="college_name" maxlength="60" autocomplete="off" size="40">
-                        </label>
-                    </td>
-                    <td>
-                        <label for="admission_fee">Admission Fee:
-                            <input type="number" name="admission_fee" maxlength="10" autocomplete="off">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="address">Address:
-                            <input type="text" name="address" maxlength="50" autocomplete="off">
-                        </label>
-                    </td>
-                    <td>
-                        <label for="email_address">Email Address:
-                            <input type="text" name="email_address" maxlength="50" autocomplete="off">
-                        </label>
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
-        <div class="class_plans">
-                <label for="class_plans">
-                   Class Plans
+    <form class="art-register-form">
+        <p>
+            <img src="../../assets/cj_remember_that.png" alt="Logo">
+            <span>J<span class="h1">yaasa Creative Group Pvt. Ltd.</span></span>
+        </p>
+        <h3><span class="A">A</span>rt Class Registration <div class="underline"></div></h3>
+        <div class="div1">
+            <label for="form_no"><b>Form No</b>
+                <br><input class="form_no_input" type="text" id="form_no" name="form_no" required>
+            </label>
+            <div class="photo-upload">
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <div class="photo-preview">
+                    <span>Click to upload a photo</span>
+                </div>
+            </div>
+            <div class="date">
+                <label for="admission_date"><b>Admission Date</b>
+                    <br><input type="date" id="admission_date" name="admission_date" required>
                 </label>
-                <label for="">
-                    <input type="radio" id="male" name="gender" value="male">Daily Class 5 days/week
+                <label for="joining_date"><b>Joining Date</b>
+                    <br><input type="date" id="joining_date" name="joining_date" required>
                 </label>
-                <label for="">
-                    <input type="radio" id="male" name="gender" value="male">Alternate Classes 3
-                    days/week
-                </label>
-                <label for="">
-                    <input type="radio" id="male" name="gender" value="male">Twice a week classes
-                </label>
-                <label for=""><input type="radio" id="male" name="gender" value="male">Once a week/Saturday
-                    classes</label>
+            </div>
         </div>
-        <button type="submit" class="art_form_submit_button">
-            Submit
-        </button>
-    </div>
 
+        <label for="student_name"><b>Student Name</b>
+            <br><input type="text" id="student_name" name="student_name" required>
+        </label>
 
+        <div class="div2">
+            <div class="gender">
+                <label for="gender"><b>Gender</b></label>
+                <label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <span>Male</span>
+                </label>
+                <label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <span>Female</span>
+                </label>
+                <label>
+                    <input type="radio" id="others" name="gender" value="others" required>
+                    <span>Others</span>
+                </label>
+            </div>
+            <div class="date">
+                <label for="birthdate"><b>Date of Birth</b>
+                    <br><input type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2019-12-31" required>
+                </label>
+                <span id="age">
+
+                </span>
+                <!-- <label for="age"><b>College/School Address</b>
+                    <br><input type="number" id="age" name="age" required>
+                </label> -->
+            </div>
+            <div class="number">
+                <input class="number" type="number" id="mobileno" name="mobileno" pattern="\d{10}"
+                    placeholder="Mobile Number 1" required>
+                <input class="number" type="number" id="mobileno" name="mobileno" pattern="\d{10}"
+                    placeholder="Mobile Number 2">
+            </div>
+        </div>
+        <!-- <div class="div2_parent">
+            <label for="gender"><b>Gender</b></label>
+            <div class="div2_child">
+                <label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <span>Male</span>
+                </label>
+                <label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <span>Female</span>
+                </label>
+                <label>
+                    <input type="radio" id="others" name="gender" value="others" required>
+                    <span>Others</span>
+                </label>
+            </div>
+            <div class="div2">
+                <label for="birthdate"><b>Date of Birth</b>
+                    <br><input type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2019-12-31" required>
+                </label>
+                <input class="number" type="number" id="mobileno" name="mobileno" pattern="\d{10}"
+                    placeholder="Mobile Number 1" required>
+                <input class="number" type="number" id="mobileno" name="mobileno" pattern="\d{10}"
+                    placeholder="Mobile Number 2">
+
+            </div>
+
+        </div> -->
+
+        <label for="guardian_name"><b>Guardian's Name</b>
+            <br><input type="text" id="guardian_name" name="guardian_name" required>
+        </label>
+        <label for="occupation"><b>Occupation</b>
+            <br><input type="text" id="occupation" name="occupation" required>
+        </label>
+
+        </label>
+        <label for="college_name"><b>Name of College/School</b>
+            <br><input type="text" id="college_name" name="college_name" required>
+        </label>
+        <label for="college_address"><b>College/School Address</b>
+            <br><input type="text" id="college_address" name="college_address" required>
+        </label>
+
+        <label for="email_address"><b>Email Address</b>
+            <br><input type="text" id="email_address" name="email_address" required>
+        </label>
+
+        <label for="plans"><b>Class Plans</b></label>
+        <label>
+            <input type="radio" id="plan1" name="plan" value="plan1" onchange="show_art()" required>
+            <span>Daily Classes 5 days/ week <b>(20 days/month)</b></span>
+        </label>
+        <label>
+            <input type="radio" id="plan2" name="plan" value="plan2" onchange="show_art()" required>
+            <span>Alternate Classes 3 days/week <b>(12 days/month)</b></span>
+        </label>
+        <label>
+            <input type="radio" id="plan3" name="plan" value="plan3" onchange="show_art()" required>
+            <span>Twice a week <b>(8 days/month)</b></span>
+        </label>
+        <label>
+            <input type="radio" id="plan4" name="plan" value="plan4" onchange="show_art()" required>
+            <span>Once a week/ Saturday Classes<b> (4 days/month)</b></span>
+        </label>
+        <label>
+            <input type="radio" id="plan5" name="plan" value="plan5" onchange="show_art()" required>
+            <span>Art Camp/Vacation class</span>
+        </label>
+        <label id="days" for="days"><b>Number of days (for art camp)</b>
+            <br><input type="number" name="days">
+        </label>
+        <label for="course"><b>Course</b></label>
+        <label>
+            <input type="radio" id="basic_course" name="course" value="basic_course" required>
+            <span><b>Basic course</b></span>
+        </label>
+        <label>
+            <input type="radio" id="advance_course" name="course" value="advance_course" required>
+            <span><b>Advanced course</b></span>
+        </label>
+        <div class="fee">
+            <label for="admission_fee"><b>Admission Fee</b>
+                <br><input type="number" id="admission_fee" name="admission_fee" required>
+            </label>
+            <label for="fee"><b>Fee</b>
+                <br><input type="number" id="fee" name="fee" required>
+            </label>
+        </div>
+
+        <button class="enroll_button" type="submit">Enroll</button>
+    </form>
 </body>
 
 </html>

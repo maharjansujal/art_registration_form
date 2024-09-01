@@ -10,50 +10,75 @@
 
 <body>
     <div class="register-container">
-        <form class="register-form">
+        <div class="white_div">
             <p>
                 <img src="../../assets/cj_remember_that.png" alt="Logo">
                 <span>J<span class="h1">yaasa Creative Group Pvt. Ltd.</span></span>
-                <h3>Enroll a student</h3>
             </p>
-            <div class="photo-upload">
-                <input type="file" id="photo" name="photo" accept="image/*">
-                <div class="photo-preview">
-                    <span>Click to upload a photo</span>
+        </div>
+        <h3>Class Registration</h3>
+            <div class="which_class">
+               <a href="./art_form.html"><button type="menu">Art Class</button></a> 
+               <a href="./tuition_form.html"><button type="menu">Tuition Class</button</a>>
+            </div>
+        <form class="art-register-form">
+            
+            <div class="div1">
+                <label for="form_no"><b>Form No</b>
+                    <br><input class="form_no_input" type="text" id="form_no" name="form_no" required>
+                </label>
+                <div class="photo-upload">
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                    <div class="photo-preview">
+                        <span>Click to upload a photo</span>
+                    </div>
+                </div>
+                <div class="date">
+                    <label for="admission_date"><b>Admission Date</b>
+                        <br><input type="date" id="admission_date" name="admission_date" required>
+                    </label>
+                    <label for="joining_date"><b>Joining Date</b>
+                        <br><input type="date" id="joining_date" name="joining_date" required>
+                    </label>
                 </div>
             </div>
-            <label for="form_no"><b>Form No</b>
-                <br><input type="text" id="form_no" name="form_no" required>
-            </label>
+            
             <label for="student_name"><b>Student Name</b>
                 <br><input type="text" id="student_name" name="student_name" required>
             </label>
-            <label for="birthdate"><b>Date of Birth</b>
-                <br><input type="date" id="birthdate" name="birthdate" min="1980-01-01" 
-                max="2019-12-31" required>
-            </label>
-            <label for="admission_date"><b>Admission Date</b>
-                <br><input type="date" id="admission_date" name="admission_date" required>
-            </label>
 
-            <label for="gender"><b>Gender</b></label>
-            <label>
-                <input type="radio" id="male" name="gender" value="male" required>
-                <span>Male</span>
-            </label>
-            <label>
-                <input type="radio" id="female" name="gender" value="female" required>
-                <span>Female</span>
-            </label>
-            <label for="joining_date"><b>Joining Date</b>
-                <br><input type="date" id="joining_date" name="joining_date" required>
-            </label>
+            <div class="div2_parent">
+                
+                <div class="div2">
+                    <label for="gender"><b>Gender</b></label>
+                    <div class="div2_child">
+                        <label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <span>Male</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <span>Female</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="others" name="gender" value="others" required>
+                        <span>Others</span>
+                    </label>
+                    </div>
+                    
+                </div>
+                <label for="birthdate"><b>Date of Birth</b>
+                    <br><input type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2019-12-31"
+                        required>
+                </label>
+            </div>
 
             <label for="guardian_name"><b>Guardian's Name</b>
                 <br><input type="text" id="guardian_name" name="guardian_name" required>
             </label>
             <label for="mobileno"><b>Mobile Number</b>
-                <br><input type="number" id="mobileno" name="mobileno" pattern="\d{10}" placeholder="Enter a valid number" required>
+                <br><input type="number" id="mobileno" name="mobileno" pattern="\d{10}"
+                    placeholder="Enter a valid number" required>
             </label>
             <label for="college_name"><b>Name of College/School</b>
                 <br><input type="text" id="college_name" name="college_name" required>
@@ -85,7 +110,7 @@
             </label>
             <label>
                 <input type="radio" id="plan5" name="plan" value="plan5" onchange="show_art()" required>
-                <span>Art Camp</span>
+                <span>Art Camp/Vacation class</span>
             </label>
             <label id="days" for="days"><b>Number of days (for art camp)</b>
                 <br><input type="number" name="days">
@@ -99,14 +124,18 @@
                 <input type="radio" id="advance_course" name="course" value="advance_course" required>
                 <span>Advanced course</span>
             </label>
-            <label for="admission_fee"><b>Admission Fee</b>
-                <br><input type="number" id="admission_fee" name="admission_fee" required>
-            </label>
-            <label for="fee"><b>Fee</b>
-                <br><input type="number" id="fee" name="fee" required>
-            </label>
-            <button type="submit">Submit</button>
+            <div class="fee">
+                <label for="admission_fee"><b>Admission Fee</b>
+                    <br><input type="number" id="admission_fee" name="admission_fee" required>
+                </label>
+                <label for="fee"><b>Fee</b>
+                    <br><input type="number" id="fee" name="fee" required>
+                </label>
+            </div>
+
+            <button class="enroll_button" type="submit">Enroll</button>
         </form>
+        <form action="" class="tuition_form">This is tuition form</form>
     </div>
     <script src="../JS/test.js"></script>
 </body>

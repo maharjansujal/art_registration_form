@@ -1,24 +1,28 @@
 body {
     font-family: 'Century Gothic', sans-serif;
-    color: white;
+    color: grey;
     margin: 0; /* Remove default margin to prevent unwanted scroll */
     padding: 0; /* Remove default padding */
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-p{
-    display: inline-block;
+p {
     margin: 0 auto;
+    color: #400F60;
 }
-p span{
-    font-size: 70px;
+
+p span {
+    font-size: 50px;
     font-weight: 600;
 }
-p img{
-    width: 65px;
-    height: 70px;
+
+p img {
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
 }
-.h1{
+
+.h1 {
     font-size: 25px;
     font-weight: bold;
 }
@@ -26,8 +30,8 @@ p img{
 .photo-upload {
     position: relative;
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border: 2px dotted white;
     border-radius: 5px;
     display: flex;
@@ -35,7 +39,7 @@ p img{
     justify-content: center;
     text-align: center;
     font-size: 14px;
-    color: white;
+    color: grey;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
     overflow: hidden;
@@ -81,18 +85,27 @@ h1, h2, h3 {
     text-align: center;
     display: inline-block;
 }
+h3{
+    text-align: left;
+    margin-bottom: 40px;
+    color: #400F60;
+    font-weight: normal;
+}
 
 .register-container {
-    width: 800px;
+    width: 700px;
     max-height: 500px;
     overflow: auto;
     margin: 50px auto;
     background-image: url('../../assets/background.jpg');
     position: relative;
 }
-
-.register-form {
-    min-width: 650px;
+.A{
+    font-size: 30px;
+    color: #400F60;
+}
+.art-register-form {
+    min-width: 500px;
     width: 80%;
     padding: 30px;
     display: flex;
@@ -103,76 +116,141 @@ h1, h2, h3 {
     position: relative;
     box-sizing: border-box;
 }
-
-.register-form label {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 18px;
+.underline{
+    width:100%;
+    background-color: #400F60;
+    height: 1px;
+}
+.art-register-form label {
+    margin-bottom: 8px;
+    font-size: 12px;
 }
 
-.register-form input {
+.art-register-form input {
     margin: 5px 0;
-    background: transparent;
-    color: white;
 }
 
-.register-form input:focus{
+
+.art-register-form input:focus{
     border: 1px solid white;
     outline: none;
 }
 
-.register-form input::placeholder {
-    color: #f0f0f0;
-    opacity: 0.5;
-}
-
 span{
-    font-size: 14px;
+    font-size: 12px;
 }
-
-.register-form input[type='text'],
-.register-form input[type='date'],
-.register-form input[type='number'] {
-    padding: 10px;
+.fee{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.art-register-form input[type='text'],
+.art-register-form input[type='number'] {
+    padding:4px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #400F60;
     box-sizing: border-box;
     font-family: 'Century Gothic';
-    font-size: 13px;
+    font-size: 12px;
 }
 
-.register-form button {
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0); /* Fully transparent background */
+.art-register-form input[type='date']{
+    border: 1px solid #400F60;
+}
+
+.art-register-form input.form_no_input {
+    width: 50% !important;
+}
+button{
+    background: rgba(255, 255, 255, 0);
     border-radius: 50px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 700;
     padding: 12px 24px;
-    border: 2px solid rgba(255, 255, 255, 0.8); /* Slightly transparent border */
+    border: 2px solid rgba(255, 255, 255, 0.8);
     outline: none;
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
     box-sizing: border-box;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Enhanced text shadow for better readability */
+    color: grey;
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); */
+}
+button{
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    outline: none;
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+    color: grey;
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); */
+}
+.tuition_form{
+    display: none;
+}
+.art-register-form .enroll_button {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    /* font-weight: 700; */
+    padding: 12px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    outline: 1px solid grey;
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+    color: grey;
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); */
 }
 
-.register-form button:hover {
+.art-register-form .enroll_button:hover, button {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 1);
-    /* box-shadow: 0 6px 12px rgba(142, 45, 226, 0.5); */
-    box-shadow: 4px white;
+    /* box-shadow: 4px white; */
     transform: scale(1.05);
 }
 
-.register-form button:active {
+.art-register-form .enroll_button:active, button {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 8px white;
+    /* box-shadow: 0 4px 8px white; */
     transform: scale(0.98);
 }
 
 #days{
     display: none;
 }
+.div{
+    display: flex;
+    flex-direction: column;
+}
+.div1{
+    display:flex;
+    justify-content: space-between;
+}
+
+.which_class{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.div2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div2 .gender, .date, .number{
+    display: flex;
+    flex-direction: column;
+}
+

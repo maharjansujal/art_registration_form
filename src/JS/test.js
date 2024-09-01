@@ -53,8 +53,17 @@ const calculateAge = (birthdate) => {
 
 document.getElementById('birthdate').addEventListener('input', (event) => {
     const birthdate = event.target.value;
-    if (birthdate) {
-        const age = calculateAge(birthdate);
-        console.log(`Age: ${age}`);
-    }
+    const age = calculateAge(birthdate);
+    console.log(`Age: ${age}`);
 });
+
+const display_art_form=()=>{
+    art_register_form.style.display="block";
+    tuition_register_form.style.display="none";
+}
+
+const display_tuition_form=()=>{
+    art_register_form.style.display="none";
+    tuition_register_form.style.display="block";
+
+}
